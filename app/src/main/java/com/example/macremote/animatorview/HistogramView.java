@@ -12,7 +12,7 @@ import android.view.View;
 /**实现柱状图动画
  * Created by macremote on 2015/9/12.
  */
-public class AnimatorView extends View {
+public class HistogramView extends View {
     private Paint mPaint ;
     //控制绘制速度，分100次完成绘制
     private static final int TOTAL_PAINT_TIMES = 100 ;
@@ -29,17 +29,17 @@ public class AnimatorView extends View {
     //当前已绘制的次数
     private int mPaintTimes = 0 ;
 
-    public AnimatorView(Context context) {
+    public HistogramView(Context context) {
         super(context);
         initialize();
     }
 
-    public AnimatorView(Context context, AttributeSet attrs) {
+    public HistogramView(Context context, AttributeSet attrs) {
         super(context, attrs);
         initialize();
     }
 
-    public AnimatorView(Context context, AttributeSet attrs, int defStyleAttr) {
+    public HistogramView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         initialize();
     }
