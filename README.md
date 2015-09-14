@@ -1,6 +1,6 @@
 # AnimatorView
 自定义带动画的view
-histogramView
+<p>histogramView
 ![image](https://github.com/Developmc/AnimatorView/blob/master/histogram.gif)
-circleBarView
+<p>circleBarView
 ![image](https://github.com/Developmc/AnimatorView/blob/master/circleBar.gif)
