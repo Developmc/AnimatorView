@@ -49,9 +49,9 @@ public class CircleBarView extends View {
         pressExtraStrokeWidth = dip2px(getContext(), 2);
         mTextSize = dip2px(getContext(), 40);
 
-        mColorWheelPaint = new Paint(Paint.ANTI_ALIAS_FLAG) ;
+        mColorWheelPaint = new Paint(Paint.ANTI_ALIAS_FLAG) ;//设置抗锯齿
         mColorWheelPaint.setColor(0xFF29a6f6) ; //蓝色
-        mColorWheelPaint.setStyle(Paint.Style.STROKE) ;
+        mColorWheelPaint.setStyle(Paint.Style.STROKE) ;//设置圆心掏空
         mColorWheelPaint.setStrokeWidth(circleStrokeWidth);
 
         mDefaultWheelPaint = new Paint(Paint.ANTI_ALIAS_FLAG) ;
