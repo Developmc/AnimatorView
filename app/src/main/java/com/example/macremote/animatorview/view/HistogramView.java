@@ -1,10 +1,9 @@
-package com.example.macremote.animatorview;
+package com.example.macremote.animatorview.view;
 
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
-import android.graphics.Typeface;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
@@ -51,12 +50,6 @@ public class HistogramView extends View {
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
         mPaintTimes++ ;
-        mPaint = new Paint() ;
-        mPaint.setAntiAlias(true);
-        mPaint.setStyle(Paint.Style.FILL);
-
-        mPaint.setColor(Color.RED);
-        mPaint.setTypeface(Typeface.DEFAULT_BOLD);
 
         for( int i=0; i<RECT_ARRAY.length; i++ ) {
 
@@ -67,6 +60,7 @@ public class HistogramView extends View {
 
             //呵呵，弄错坐标图看不到
             canvas.drawRect(paintXPos, getHeight()-paintYPos, paintXPos+RECT_WIDTH,getHeight(), mPaint);
+            canvas.drawText("" + paintYPos, paintXPos+RECT_WIDTH/2, getHeight() - paintYPos, mPaint);
             if( mPaintTimes < TOTAL_PAINT_TIMES ) {
                 Log.d("Log",""+mPaintTimes) ;
                 //实现动画的关键点(重绘)
